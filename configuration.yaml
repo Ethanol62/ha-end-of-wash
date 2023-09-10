@@ -1,0 +1,9 @@
+template: 
+    binary_sensor:
+        - state: "{{ states('YOUR PLUG CONSUMPTION SENSOR') | float(default = 0) > 3 }}"
+          name: Washing in Progress
+          unique_id: is_washing_machine_running
+          device_class: running
+    
+
+

@@ -1,0 +1,16 @@
+alias: End of Wash Notification
+description: ""
+trigger:
+  - platform: state
+    entity_id:
+      - binary_sensor.washing_in_progress
+    from: "on"
+    to: "off"
+condition: []
+action:
+  - device_id: YOUR DEVICE ID
+    domain: mobile_app
+    type: notify
+    title: Home Assistant
+    message: Wash cycle completed ⚡
+mode: single
